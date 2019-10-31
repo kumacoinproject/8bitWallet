@@ -1,24 +1,27 @@
-# 8bitwallet
+8bitWallet
+====
+This is local wallet app for [bc4py](https://github.com/namuyan/b4py).
 
-## Project setup
+Project setup
+----
 ```
+// Project setup
 npm install
-```
 
-### Compiles and hot-reloads for development
-```
+// Compiles and hot-reloads for development
 npm run serve
-```
 
-### Compiles and minifies for production
-```
+// Compiles and minifies for production
 npm run build
-```
 
-### Lints and fixes files
-```
+// Lints and fixes files
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Licence
+----
+MIT
+
+Author
+----
+[namuyan](https://twitter.com/namuyan_mine)
