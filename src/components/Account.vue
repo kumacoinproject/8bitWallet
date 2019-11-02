@@ -178,7 +178,9 @@ export default {
       const receiveElm = document.getElementById('receive-account-name')
       if (receiveElm.selectedIndex < 1) return
       this.axios.get(store.getters.getEndpoint + '/private/newaddress', {
-        account: receiveElm.value
+        params: {
+          account: receiveElm.value
+        }
       }).then((response) => {
         this.receiveAddress = response.data
         console.log(response.data)
