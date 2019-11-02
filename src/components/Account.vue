@@ -160,9 +160,12 @@ export default {
       if (outputs.length < 1) return
       const ask = window.confirm('Try to send?')
       if (!ask) return
-      this.axios.post(store.getters.getEndpoint + '/private/sendmany', {
+      this.axios.post(store.getters.getEndpoint + '/private/sendmany', JSON.stringify({
         sender: senderElm.value,
         pairs: outputs
+      }), {
+        xsrfHeaderName: 'X-CSRF-Token',
+        withCredentials: true
       }).then((response) => {
         this.sendTxInfo = response.data
         console.log(response.data)
