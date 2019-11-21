@@ -163,10 +163,7 @@ export default {
       this.axios.post(store.getters.getEndpoint + '/private/sendmany', JSON.stringify({
         sender: senderElm.value,
         pairs: outputs
-      }), {
-        xsrfHeaderName: 'X-CSRF-Token',
-        withCredentials: true
-      }).then((response) => {
+      })).then((response) => {
         this.sendTxInfo = response.data
         console.log(response.data)
       }).catch((error) => {
