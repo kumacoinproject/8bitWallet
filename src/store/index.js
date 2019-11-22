@@ -33,7 +33,8 @@ const store = new Vuex.Store({
       nonce: null,
       txs: []
     },
-    accountTxs: []
+    accountTxs: [],
+    unixtime: 0
   },
   mutations: {
     SOCKET_ONOPEN (state, event) {

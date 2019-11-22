@@ -4,7 +4,12 @@
       <h3 class="title">best block</h3>
 
       <!-- block mined progress -->
-      <progress class="nes-progress is-pattern" :value="getBLockTime" max="120"></progress>
+      <div>
+        <span>{{getTimeBlockAfter}}s passed after best block mined</span>
+        <progress v-if="getTimeBlockAfter<120" class="nes-progress is-error" :value="getTimeBlockAfter" max="120"></progress>
+        <progress v-else-if="getTimeBlockAfter<600" class="nes-progress is-primary" :value="getTimeBlockAfter" max="600"></progress>
+        <progress v-else class="nes-progress is-success" :value="getTimeBlockAfter" max="3600"></progress>
+      </div>
 
       <!-- best block -->
       <div class="nes-table-responsive">
@@ -57,9 +62,8 @@ export default {
     getAccountTxs: function () {
       return store.state.accountTxs
     },
-    getBLockTime: function () {
-      let time = new Date().getTime() / 1000
-      return Math.round(time - store.state.bestBlock.time)
+    getTimeBlockAfter: function () {
+      return store.state.unixtime - store.state.bestBlock.time
     }
   },
   mounted () {

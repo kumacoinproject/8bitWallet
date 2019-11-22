@@ -73,6 +73,12 @@ function autoDeleteGlobalMessage () {
   }, 250)
 }
 
+function globalTimeUpdate () {
+  setInterval(function () {
+    store.state.unixtime = Math.round(new Date().getTime() / 1000)
+  }, 1000)
+}
+
 export default {
   name: 'App',
   // dynamic
@@ -103,6 +109,7 @@ export default {
   },
   mounted () {
     autoDeleteGlobalMessage()
+    globalTimeUpdate()
   }
 }
 </script>
