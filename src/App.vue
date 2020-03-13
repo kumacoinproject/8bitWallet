@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import store from '@/store'
+import store from './store'
 
 function autoDeleteGlobalMessage () {
   let watch = null

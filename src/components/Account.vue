@@ -105,7 +105,7 @@
 </template>
 
 <script>
-import store from '@/store'
+import store from '../store'
 import txOutput from './txOutput'
 import QrCode from 'vue-qrcode'
 
