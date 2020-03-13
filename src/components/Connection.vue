@@ -71,7 +71,7 @@ export default {
         {
           name: 'testnet official',
           protocol: 'https',
-          url: 'testnet.pycontract.tk'
+          url: 'testnet.kumacoin.dev'
         }
       ],
       selectIndex: null,

@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'aaa',
+  name: 'txOutput',
   methods: {
     onRemoveOutput: function (event) {
       event.target.parentElement.remove()
